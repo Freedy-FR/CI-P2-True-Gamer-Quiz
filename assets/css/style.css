@@ -48,48 +48,12 @@ nav>h1 {
 
 nav>a {
     height: inherit;
-
 }
-
-/* General Styles */
-
-h2 {
-    text-align: center;
-    font-family: 'Geo', sans-serif;
-}
-
 
 nav a {
     text-decoration: none;
     color: var(--main-font-color);
 }
-
-.middle-container {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--main-color);
-    width: 40rem;
-    margin: 20px auto;
-
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-
-    border-radius: 10px;
-
-    color: var(--main-font-color);
-}
-
-.text-container {
-    padding: 10px 20px;
-    font-family: 'VT323', monospace;
-}
-
-/* .hide {
-    display: none;
-} */
-
-
 
 /* Main content */
 
@@ -111,8 +75,37 @@ label {
     margin: auto;
 }
 
+.middle-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color);
+    width: 40rem;
+    margin: 20px auto;
+    padding: 10px;
+
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    color: var(--main-font-color);
+}
+
+.text-container {
+    padding: 10px 20px;
+    font-family: 'VT323', monospace;
+}
+
 .name-container {
     display: block;
+}
+
+#btn-answer {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;
+    margin: 20px;
 }
 
 
@@ -150,4 +143,22 @@ footer a {
 
 #footer-about p {
     margin: auto 10px auto auto;
+}
+
+/* General Styles */
+
+h2 {
+    text-align: center;
+    font-family: 'Geo', sans-serif;
+}
+
+/* .hide {
+    display: none;
+} */
+
+.btn {
+    padding: 5px;
+    margin: 10px;
+
+    font-family: 'VT323', monospace;
 }
