@@ -12,11 +12,14 @@ body {
     width: 100%;
 }
 
+/* Color Variables */
 :root {
     --main-color: #0C0C0C;
     --secondary-color: #5B5B58;
+    --main-font-color: #ECECEC;
 }
 
+/* Navigation Bar */
 nav {
     width: 100%;
     height: 50px;
@@ -27,7 +30,20 @@ nav {
 nav>h1 {
     display: flex;
     width: 100%;
+    height: inherit;
     margin: 0;
     justify-content: center;
     align-items: center;
+}
+
+nav>a {
+    height: inherit;
+
+}
+
+/* General Styles */
+
+a {
+    text-decoration: none;
+    color: var(--main-font-color);
 }
