@@ -79,7 +79,10 @@ label {
     display: flex;
     flex-direction: column;
     background-color: var(--main-color);
-    width: 40rem;
+
+    min-width: 20rem;
+    max-width: 60rem;
+
     margin: 20px auto;
     padding: 10px;
 
@@ -90,6 +93,8 @@ label {
     border-radius: 10px;
 
     color: var(--main-font-color);
+
+    box-shadow: 0 0 10px 2px var(--secondary-color);
 }
 
 .text-container {
@@ -152,13 +157,13 @@ h2 {
     font-family: 'Geo', sans-serif;
 }
 
-/* .hide {
-    display: none;
-} */
-
 .btn {
     padding: 5px;
     margin: 10px;
 
     font-family: 'VT323', monospace;
+}
+
+.hide {
+    display: none;
 }
