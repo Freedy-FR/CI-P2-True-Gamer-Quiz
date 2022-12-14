@@ -8,6 +8,8 @@ body {
     display: flex;
     flex-direction: column;
 
+    font-family: 'Geo', sans-serif;
+
     padding: 0;
     margin: 0;
 
@@ -53,6 +55,7 @@ nav>a {
 
 h2 {
     text-align: center;
+    font-family: 'Geo', sans-serif;
 }
 
 
@@ -64,7 +67,7 @@ nav a {
 .middle-container {
     display: flex;
     flex-direction: column;
-    background-color: var(--secondary-color);
+    background-color: var(--main-color);
     width: 40rem;
     margin: 20px auto;
 
@@ -73,15 +76,18 @@ nav a {
     align-items: center;
 
     border-radius: 10px;
+
+    color: var(--main-font-color);
 }
 
 .text-container {
     padding: 10px 20px;
+    font-family: 'VT323', monospace;
 }
 
-.hide {
+/* .hide {
     display: none;
-}
+} */
 
 
 
