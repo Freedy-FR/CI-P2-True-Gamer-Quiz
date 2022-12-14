@@ -4,6 +4,7 @@
 
 body {
     display: flex;
+    flex-direction: column;
 
     padding: 0;
     margin: 0;
@@ -43,7 +44,54 @@ nav>a {
 
 /* General Styles */
 
-a {
+nav a {
     text-decoration: none;
     color: var(--main-font-color);
+}
+
+
+
+/* Main content */
+
+main {
+    flex: 1 0 auto;
+    min-height: 100vh;
+}
+
+
+
+/* Footer Styles */
+
+#sticky {
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    color: var(--main-font-color);
+}
+
+footer a {
+    color: var(--main-font-color);
+}
+
+#social {
+    display: inline-block;
+
+    margin: auto auto auto 10px;
+}
+
+#about {
+    display: inline-block;
+
+    margin: auto 10px auto auto;
+}
+
+#about p {
+    margin: auto 10px auto auto;
 }
