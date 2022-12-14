@@ -11,6 +11,11 @@ body {
 
     height: 100%;
     width: 100%;
+
+    background-image: url(../images/wallpaperflare.com_wallpaper.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /* Color Variables */
@@ -49,6 +54,16 @@ nav a {
     color: var(--main-font-color);
 }
 
+.middle-container {
+    background-color: var(--secondary-color);
+    width: 40rem;
+    margin: auto;
+}
+
+.hide {
+    display: none;
+}
+
 
 
 /* Main content */
@@ -85,12 +100,12 @@ footer a {
     margin: auto auto auto 10px;
 }
 
-#about {
+#footer-about {
     display: inline-block;
 
     margin: auto 10px auto auto;
 }
 
-#about p {
+#footer-about p {
     margin: auto 10px auto auto;
 }
