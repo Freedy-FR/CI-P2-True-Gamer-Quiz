@@ -49,15 +49,30 @@ nav>a {
 
 /* General Styles */
 
+h2 {
+    text-align: center;
+}
+
+
 nav a {
     text-decoration: none;
     color: var(--main-font-color);
 }
 
 .middle-container {
+    display: flex;
+    flex-direction: column;
     background-color: var(--secondary-color);
     width: 40rem;
     margin: auto;
+
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.text-container {
+    padding: 10px 20px;
 }
 
 .hide {
@@ -69,8 +84,24 @@ nav a {
 /* Main content */
 
 main {
+    display: flex;
     flex: 1 0 auto;
     min-height: 100vh;
+
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+input,
+label {
+    display: block;
+    width: 95%;
+    margin: auto;
+}
+
+.name-container {
+    display: block;
 }
 
 
