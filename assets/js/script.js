@@ -11,7 +11,7 @@ let correctAnswer;
 let incorrectAnswer;
 
 let currentScore = 0;
-let questionAnswered = 0;
+let questionAnswered = 1;
 let numberOfQuestions = 10;
 
 let mainPage = document.getElementById("main-page");
@@ -83,7 +83,7 @@ function checkAnswerNext() {
             questionStatus.innerHTML = `<p> You got it wrong! <i class="fa-sharp fa-solid fa-circle-xmark"></i></p><br><p>Correct Answer: ${correctAnswer}</p>`;
         }
     }
-    showQuestion();
+    counterFunctions();
 }
 
 // Transform HTML into text strings
@@ -93,6 +93,20 @@ function HTMLtoString(textString) {
 }
 
 //  Question Counter and correct answer counter
+
+function counterFunctions() {
+    questionAnswered++;
+    document.getElementById("scoreCount").innerHTML = currentScore;
+    document.getElementById("questionNumber").innerHTML = questionAnswered;
+
+    if (questionAnswered == numberOfQuestions) {
+        alert("result");
+        resultPage();
+    } else {
+        getData();
+        showQuestion();
+    }
+}
 
 
 
