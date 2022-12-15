@@ -50,6 +50,11 @@ function showQuestion(data) {
     let questionsList = incorrectAnswer;
     questionsList.splice(Math.floor(Math.random() * (incorrectAnswer.length + 1)), 0, correctAnswer);
     questionInput.innerHTML = `<p>${data.question}</p>`;
+    answerGrid.innerHTML = `
+    ${questionsList.map((option, index) =>`
+    <button class="btn">${index +1} - <span>${option}</span></button>
+    `).join('')}
+    `;
 }
 
 getData();
