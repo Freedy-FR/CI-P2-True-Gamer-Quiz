@@ -97,6 +97,10 @@ label {
     box-shadow: 0 0 10px 2px var(--secondary-color);
 }
 
+.middle-container>i {
+    color: var(--main-font-color);
+}
+
 .text-container {
     padding: 10px 20px;
     font-family: 'VT323', monospace;

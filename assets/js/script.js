@@ -4,6 +4,8 @@ let startButton = document.getElementById("btn-start");
 let nameInput = document.getElementById("name");
 let questionInput = document.getElementById("question");
 let answerGrid = document.getElementById("btn-answer");
+let nextButton = document.getElementById("btn-next");
+let questionStatus = document.getElementById("status");
 
 let correctAnswer = "";
 let incorrectAnswer = "";
@@ -50,6 +52,7 @@ function showQuestion(data) {
     selectBtn();
 };
 
+
 // Button selector
 function selectBtn() {
     answerGrid.querySelectorAll("button").forEach((option) => {
@@ -64,8 +67,22 @@ function selectBtn() {
 };
 
 
+// Next button and check answer
+nextButton.addEventListener("click", checkAnswerNext);
 
+function checkAnswerNext() {
+    if (answerGrid.querySelector(".highlighted")) {
+        let highlightedButton = answerGrid.querySelector(".highlighted span").textContent;
+        console.log(highlightedButton);
 
+        if (highlightedButton == correctAnswer) {
+            currentScore++;
+            questionStatus.innerHTML = `<p> You got it right! <i class="fa-regular fa-circle-check"></i></p>`;
+        } else {
+            questionStatus.innerHTML = `<p> You got it wrong! <i class="fa-sharp fa-solid fa-circle-xmark"></i></p><br><p>Correct Answer: ${correctAnswer}</p>`;
+        }
+    }
+};
 
 
 
