@@ -47,7 +47,23 @@ function showQuestion(data) {
     <button class="btn">${index +1} - <span>${option}</span></button>
     `).join('')}
     `;
-}
+    selectBtn();
+};
+
+// Button selector
+function selectBtn() {
+    answerGrid.querySelectorAll("button").forEach((option) => {
+        option.addEventListener("click", () => {
+            console.log("test");
+        })
+    })
+};
+
+
+
+
+
+
 
 
 // Start game function
