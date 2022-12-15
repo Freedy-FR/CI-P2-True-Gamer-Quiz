@@ -12,7 +12,7 @@ let incorrectAnswer;
 
 let currentScore = 0;
 let questionAnswered = 1;
-let numberOfQuestions = 10;
+let numberOfQuestions = 11;
 
 let mainPage = document.getElementById("main-page");
 let gameArea = document.getElementById("game-area");
@@ -21,6 +21,7 @@ let gameArea = document.getElementById("game-area");
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("scoreCount").innerHTML = currentScore;
     document.getElementById("total-questions").innerHTML = numberOfQuestions;
+    getData();
 });
 
 
@@ -33,12 +34,15 @@ let url = "https://opentdb.com/api.php?amount=1&category=15&difficulty=easy&type
 async function getData() {
     let response = await fetch(url);
     let data = await response.json();
+    questionStatus.innerHTML = "";
     showQuestion(data.results[0]);
 }
 
 
 // Show Questions and answers function
 function showQuestion(data) {
+    nextButton.disabled = true;
+    questionStatus.innerHTML = `<p>Please insert an Answer!!</p>`
     correctAnswer = data.correct_answer;
     incorrectAnswer = data.incorrect_answers;
     let questionsList = incorrectAnswer;
@@ -63,6 +67,8 @@ function selectBtn() {
                 highlightedOption.classList.remove("highlighted");
             }
             option.classList.add("highlighted");
+            questionStatus.innerHTML = "";
+            nextButton.disabled = false;
         });
     });
 }
@@ -96,6 +102,7 @@ function HTMLtoString(textString) {
 
 function counterFunctions() {
     questionAnswered++;
+
     document.getElementById("scoreCount").innerHTML = currentScore;
     document.getElementById("questionNumber").innerHTML = questionAnswered;
 
@@ -103,8 +110,10 @@ function counterFunctions() {
         alert("result");
         resultPage();
     } else {
-        getData();
-        showQuestion();
+        nextButton.disabled = true;
+        setTimeout(() => {
+            getData();
+        }, 2000);
     }
 }
 
@@ -120,7 +129,6 @@ function startGame() {
     } else {
         mainPage.classList.add("hide");
         gameArea.classList.remove("hide");
-        getData();
         showQuestion();
     }
 }
