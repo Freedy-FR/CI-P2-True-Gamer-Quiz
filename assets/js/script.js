@@ -4,8 +4,10 @@ let startButton = document.getElementById("btn-start");
 let nameInput = document.getElementById("name");
 let questionInput = document.getElementById("question");
 let answerGrid = document.getElementById("btn-answer");
+let answerButtons = document.getElementsByClassName("btn-option");
 let nextButton = document.getElementById("btn-next");
 let questionStatus = document.getElementById("status");
+let nameStatus = document.getElementById("name-status");
 
 let correctAnswer;
 let incorrectAnswer;
@@ -20,7 +22,7 @@ let gameArea = document.getElementById("game-area");
 // DOM load
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("scoreCount").innerHTML = currentScore;
-    document.getElementById("total-questions").innerHTML = numberOfQuestions;
+    document.getElementById("total-questions").innerHTML = numberOfQuestions - 1;
     getData();
 });
 
@@ -50,7 +52,7 @@ function showQuestion(data) {
     questionInput.innerHTML = `<p>${data.question}</p>`;
     answerGrid.innerHTML = `
     ${questionsList.map((option, index) =>`
-    <button class="btn">${index +1} - <span>${option}</span></button>
+    <button class="btn-option btn">${index +1} - <span>${option}</span></button>
     `).join('')}
     `;
     console.log(correctAnswer);
@@ -99,24 +101,39 @@ function HTMLtoString(textString) {
 }
 
 //  Question Counter and correct answer counter
-
 function counterFunctions() {
     questionAnswered++;
+    // test later
+    if (questionAnswered == "11") {
+        document.getElementById("questionNumber").innerHTML = `<p>Finished!</p>`;
+    };
 
     document.getElementById("scoreCount").innerHTML = currentScore;
     document.getElementById("questionNumber").innerHTML = questionAnswered;
 
     if (questionAnswered == numberOfQuestions) {
-        alert("result");
-        resultPage();
+        setTimeout(() => {
+            alert("result");
+            resultPage();
+        }, 2000);
+
     } else {
+        disableOptionButtons();
         nextButton.disabled = true;
         setTimeout(() => {
             getData();
         }, 2000);
+
     }
 }
 
+
+// Disable Answer buttons
+function disableOptionButtons() {
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].disabled = true;
+    }
+}
 
 
 
@@ -125,8 +142,9 @@ startButton.addEventListener("click", startGame);
 
 function startGame() {
     if (nameInput.value == "") {
-        alert("Please insert a name to play!");
+        nameStatus.innerHTML = `<p>Please insert your name to start game!</p>`;
     } else {
+        nameStatus.innerHTML = "";
         mainPage.classList.add("hide");
         gameArea.classList.remove("hide");
         showQuestion();
