@@ -54,7 +54,11 @@ function showQuestion(data) {
 function selectBtn() {
     answerGrid.querySelectorAll("button").forEach((option) => {
         option.addEventListener("click", () => {
-            console.log("test");
+            if (answerGrid.querySelector(".highlighted")) {
+                let highlightedOption = answerGrid.querySelector(".highlighted");
+                highlightedOption.classList.remove("highlighted");
+            }
+            option.classList.add("highlighted");
         })
     })
 };
