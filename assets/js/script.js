@@ -15,6 +15,7 @@ let finalResultScore = document.getElementById("final-result");
 let retryButton = document.getElementById("retry");
 let rulesButton = document.getElementById("btn-rules");
 let aboutDiv = document.getElementById("footer-about");
+let backButton = document.getElementsByClassName("btn-back");
 
 let correctAnswer;
 let incorrectAnswer;
@@ -196,11 +197,24 @@ function rulesPage() {
 
 
 // About page function
-
 aboutDiv.addEventListener("click", aboutPage);
 
 function aboutPage() {
     alert("testing 123")
     mainPage.classList.add("hide");
     aboutPageArea.classList.remove("hide");
+}
+
+
+// Back button function
+for (let i = 0; i < backButton.length; i++) {
+    backButton[i].addEventListener("click", backFunction);
+}
+
+function backFunction() {
+    mainPage.classList.remove("hide");
+    aboutPageArea.classList.add("hide");
+    rulesPageArea.classList.add("hide");
+    resultPageArea.classList.add("hide");
+    resetGame();
 }
