@@ -150,3 +150,11 @@ function startGame() {
         showQuestion();
     }
 }
+
+
+// Result Page function
+function resultPage() {
+    gameArea.classList.add("hide");
+    resultPageArea.classList.remove("hide");
+    finalResultScore.innerHTML = document.getElementById("score").innerHTML;
+}
