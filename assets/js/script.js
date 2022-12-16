@@ -122,14 +122,14 @@ function counterFunctions() {
         setTimeout(() => {
             alert("result");
             resultPage();
-        }, 2);
+        }, 1500);
 
     } else {
         disableOptionButtons();
         nextButton.disabled = true;
         setTimeout(() => {
             getData();
-        }, 2);
+        }, 1500);
     }
 }
 
@@ -147,14 +147,14 @@ function disableOptionButtons() {
 startButton.addEventListener("click", startGame);
 
 function startGame() {
-    // if (nameInput.value == "") {
-    //     nameStatus.innerHTML = `<p>Please insert your name to start game!</p>`;
-    // } else {
-    nameStatus.innerHTML = "";
-    mainPage.classList.add("hide");
-    gameArea.classList.remove("hide");
-    showQuestion();
-    // }
+    if (nameInput.value == "") {
+        nameStatus.innerHTML = `<p class="name-status">Please insert your name to start game!</p>`;
+    } else {
+        nameStatus.innerHTML = "";
+        mainPage.classList.add("hide");
+        gameArea.classList.remove("hide");
+        showQuestion();
+    }
 }
 
 
