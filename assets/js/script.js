@@ -168,5 +168,16 @@ retryButton.addEventListener("click", retryFunction);
 function retryFunction() {
 
     resultPageArea.classList.add("hide");
+    resetGame();
     startGame();
+}
+
+// Reset counters and displays function
+function resetGame() {
+    currentScore = 0;
+    questionAnswered = 1;
+    numberOfQuestions = 11;
+    displayScore.innerHTML = currentScore;
+    totalQuestions.innerHTML = numberOfQuestions - 1;
+    displayQuestionNumber.innerHTML = questionAnswered;
 }
