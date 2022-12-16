@@ -12,6 +12,7 @@ let displayScore = document.getElementById("scoreCount");
 let totalQuestions = document.getElementById("total-questions");
 let displayQuestionNumber = document.getElementById("questionNumber");
 let finalResultScore = document.getElementById("final-result");
+let retryButton = document.getElementById("retry");
 
 let correctAnswer;
 let incorrectAnswer;
@@ -116,14 +117,14 @@ function counterFunctions() {
         setTimeout(() => {
             alert("result");
             resultPage();
-        }, 2000);
+        }, 2);
 
     } else {
         disableOptionButtons();
         nextButton.disabled = true;
         setTimeout(() => {
             getData();
-        }, 2000);
+        }, 2);
     }
 }
 
@@ -141,14 +142,14 @@ function disableOptionButtons() {
 startButton.addEventListener("click", startGame);
 
 function startGame() {
-    if (nameInput.value == "") {
-        nameStatus.innerHTML = `<p>Please insert your name to start game!</p>`;
-    } else {
-        nameStatus.innerHTML = "";
-        mainPage.classList.add("hide");
-        gameArea.classList.remove("hide");
-        showQuestion();
-    }
+    // if (nameInput.value == "") {
+    //     nameStatus.innerHTML = `<p>Please insert your name to start game!</p>`;
+    // } else {
+    nameStatus.innerHTML = "";
+    mainPage.classList.add("hide");
+    gameArea.classList.remove("hide");
+    showQuestion();
+    // }
 }
 
 
@@ -157,4 +158,15 @@ function resultPage() {
     gameArea.classList.add("hide");
     resultPageArea.classList.remove("hide");
     finalResultScore.innerHTML = document.getElementById("score").innerHTML;
+}
+
+
+// Retry button function
+
+retryButton.addEventListener("click", retryFunction);
+
+function retryFunction() {
+
+    resultPageArea.classList.add("hide");
+    startGame();
 }
