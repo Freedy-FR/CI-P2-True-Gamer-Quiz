@@ -14,6 +14,7 @@ let displayQuestionNumber = document.getElementById("questionNumber");
 let finalResultScore = document.getElementById("final-result");
 let retryButton = document.getElementById("retry");
 let rulesButton = document.getElementById("btn-rules");
+let aboutDiv = document.getElementById("footer-about");
 
 let correctAnswer;
 let incorrectAnswer;
@@ -26,6 +27,7 @@ let mainPage = document.getElementById("main-page");
 let gameArea = document.getElementById("game-area");
 let resultPageArea = document.getElementById("results");
 let rulesPageArea = document.getElementById("rules");
+let aboutPageArea = document.getElementById("about");
 
 // DOM load
 document.addEventListener("DOMContentLoaded", () => {
@@ -190,4 +192,15 @@ rulesButton.addEventListener("click", rulesPage);
 function rulesPage() {
     rulesPageArea.classList.remove("hide");
     mainPage.classList.add("hide");
+}
+
+
+// About page function
+
+aboutDiv.addEventListener("click", aboutPage);
+
+function aboutPage() {
+    alert("testing 123")
+    mainPage.classList.add("hide");
+    aboutPageArea.classList.remove("hide");
 }
