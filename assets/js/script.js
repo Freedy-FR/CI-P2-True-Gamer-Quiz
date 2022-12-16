@@ -13,6 +13,7 @@ let totalQuestions = document.getElementById("total-questions");
 let displayQuestionNumber = document.getElementById("questionNumber");
 let finalResultScore = document.getElementById("final-result");
 let retryButton = document.getElementById("retry");
+let rulesButton = document.getElementById("btn-rules");
 
 let correctAnswer;
 let incorrectAnswer;
@@ -24,6 +25,7 @@ let numberOfQuestions = 11;
 let mainPage = document.getElementById("main-page");
 let gameArea = document.getElementById("game-area");
 let resultPageArea = document.getElementById("results");
+let rulesPageArea = document.getElementById("rules");
 
 // DOM load
 document.addEventListener("DOMContentLoaded", () => {
@@ -180,4 +182,12 @@ function resetGame() {
     displayScore.innerHTML = currentScore;
     totalQuestions.innerHTML = numberOfQuestions - 1;
     displayQuestionNumber.innerHTML = questionAnswered;
+}
+
+// Rules Page function
+rulesButton.addEventListener("click", rulesPage);
+
+function rulesPage() {
+    rulesPageArea.classList.remove("hide");
+    mainPage.classList.add("hide");
 }
