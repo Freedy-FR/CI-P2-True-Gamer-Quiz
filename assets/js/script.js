@@ -8,6 +8,10 @@ let answerButtons = document.getElementsByClassName("btn-option");
 let nextButton = document.getElementById("btn-next");
 let questionStatus = document.getElementById("status");
 let nameStatus = document.getElementById("name-status");
+let displayScore = document.getElementById("scoreCount");
+let totalQuestions = document.getElementById("total-questions");
+let displayQuestionNumber = document.getElementById("questionNumber");
+let finalResultScore = document.getElementById("final-result");
 
 let correctAnswer;
 let incorrectAnswer;
@@ -18,11 +22,12 @@ let numberOfQuestions = 11;
 
 let mainPage = document.getElementById("main-page");
 let gameArea = document.getElementById("game-area");
+let resultPageArea = document.getElementById("results");
 
 // DOM load
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("scoreCount").innerHTML = currentScore;
-    document.getElementById("total-questions").innerHTML = numberOfQuestions - 1;
+    displayScore.innerHTML = currentScore;
+    totalQuestions.innerHTML = numberOfQuestions - 1;
     getData();
 });
 
@@ -103,13 +108,9 @@ function HTMLtoString(textString) {
 //  Question Counter and correct answer counter
 function counterFunctions() {
     questionAnswered++;
-    // test later
-    if (questionAnswered == "11") {
-        document.getElementById("questionNumber").innerHTML = `<p>Finished!</p>`;
-    };
 
-    document.getElementById("scoreCount").innerHTML = currentScore;
-    document.getElementById("questionNumber").innerHTML = questionAnswered;
+    displayScore.innerHTML = currentScore;
+    displayQuestionNumber.innerHTML = questionAnswered;
 
     if (questionAnswered == numberOfQuestions) {
         setTimeout(() => {
@@ -123,7 +124,6 @@ function counterFunctions() {
         setTimeout(() => {
             getData();
         }, 2000);
-
     }
 }
 
