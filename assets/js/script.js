@@ -16,6 +16,7 @@ let retryButton = document.getElementById("retry");
 let rulesButton = document.getElementById("btn-rules");
 let aboutDiv = document.getElementById("footer-about");
 let backButton = document.getElementsByClassName("btn-back");
+let resultMessage = document.getElementById("text-result");
 
 let correctAnswer;
 let incorrectAnswer;
@@ -148,7 +149,7 @@ startButton.addEventListener("click", startGame);
 
 function startGame() {
     if (nameInput.value == "") {
-        nameStatus.innerHTML = `<p class="name-status">Please insert your name to start game!</p>`;
+        nameStatus.innerHTML = `<p class="name-status">Please insert your name to start the game!</p>`;
     } else {
         nameStatus.innerHTML = "";
         mainPage.classList.add("hide");
@@ -163,6 +164,8 @@ function resultPage() {
     gameArea.classList.add("hide");
     resultPageArea.classList.remove("hide");
     finalResultScore.innerHTML = document.getElementById("score").innerHTML;
+    resultMessage.innerHTML = `<p>Congratulations ${nameInput.value} you results are: </p>`
+
 }
 
 
