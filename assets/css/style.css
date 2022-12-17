@@ -103,6 +103,11 @@ label {
     color: var(--main-font-color);
 }
 
+.para-text {
+    text-align: center;
+    font-size: 25px;
+}
+
 .fa-circle-check {
     padding: 0 15px;
     color: var(--correct-color);
@@ -175,6 +180,7 @@ footer a {
 h2 {
     text-align: center;
     font-family: 'Geo', sans-serif;
+    font-size: 35px;
 }
 
 .btn {
