@@ -56,7 +56,7 @@ async function getData() {
 // Show Questions and answers function
 function showQuestion(data) {
     nextButton.disabled = true;
-    questionStatus.innerHTML = `<p>Please insert an Answer!!</p>`
+    questionStatus.innerHTML = `<p>Please insert an Answer!!</p>`;
     correctAnswer = data.correct_answer;
     incorrectAnswer = data.incorrect_answers;
     let questionsList = incorrectAnswer;
@@ -164,7 +164,7 @@ function resultPage() {
     gameArea.classList.add("hide");
     resultPageArea.classList.remove("hide");
     finalResultScore.innerHTML = document.getElementById("score").innerHTML;
-    resultMessage.innerHTML = `<p>Congratulations ${nameInput.value} you results are: </p>`
+    resultMessage.innerHTML = `<p>Congratulations ${nameInput.value} you results are: </p>`;
 
 }
 
@@ -203,7 +203,7 @@ function rulesPage() {
 aboutDiv.addEventListener("click", aboutPage);
 
 function aboutPage() {
-    alert("testing 123")
+    alert("testing 123");
     mainPage.classList.add("hide");
     aboutPageArea.classList.remove("hide");
 }
