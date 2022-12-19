@@ -56,7 +56,7 @@ async function getData() {
 // Show Questions and answers function
 function showQuestion(data) {
     nextButton.disabled = true;
-    questionStatus.innerHTML = `<p>Please insert an Answer!!</p>`;
+    questionStatus.innerHTML = `<p class="questionPara">Please insert an Answer!!</p>`;
     correctAnswer = data.correct_answer;
     incorrectAnswer = data.incorrect_answers;
     let questionsList = incorrectAnswer;
@@ -98,9 +98,9 @@ function checkAnswerNext() {
 
         if (highlightedButton == HTMLtoString(correctAnswer)) {
             currentScore++;
-            questionStatus.innerHTML = `<p> You got it right! <i class="fa-regular fa-circle-check"></i></p>`;
+            questionStatus.innerHTML = `<p class="questionPara"> You got it right! <i class="fa-regular fa-circle-check"></i></p>`;
         } else {
-            questionStatus.innerHTML = `<p> You got it wrong! <i class="fa-sharp fa-solid fa-circle-xmark"></i></p><br><p>Correct Answer: ${correctAnswer}</p>`;
+            questionStatus.innerHTML = `<p class="questionPara"> You got it wrong! <i class="fa-sharp fa-solid fa-circle-xmark"></i></p><br><p class="questionPara">Correct Answer: <span class="correct-color">${correctAnswer}</span></p>`;
         }
     }
     counterFunctions();

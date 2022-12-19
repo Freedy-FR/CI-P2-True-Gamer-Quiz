@@ -112,12 +112,16 @@ label {
 }
 
 .fa-circle-check {
-    padding: 0 15px;
+    padding: 0 10px;
+    color: var(--correct-color);
+}
+
+.correct-color {
     color: var(--correct-color);
 }
 
 .fa-circle-xmark {
-    padding: 0 15px;
+    padding: 0 10px;
     color: var(--warning-color);
 }
 
@@ -133,6 +137,7 @@ label {
 
 .questionPara {
     font-size: 25px;
+    text-align: center;
 }
 
 .name-label {
@@ -262,7 +267,7 @@ h2 {
     }
 
     .btn-option {
-        text-align: justify;
+        text-align: center;
     }
 
     .questionPara {
