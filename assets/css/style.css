@@ -135,9 +135,14 @@ label {
 
 #btn-answer {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 20px;
     margin: 20px;
+}
+
+.btn-option {
+    font-size: medium;
 }
 
 .name-status {
