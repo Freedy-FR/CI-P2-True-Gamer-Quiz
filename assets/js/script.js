@@ -204,8 +204,11 @@ aboutDiv.addEventListener("click", aboutPage);
 
 function aboutPage() {
     alert("testing 123");
-    mainPage.classList.add("hide");
     aboutPageArea.classList.remove("hide");
+    mainPage.classList.add("hide");
+    rulesPageArea.classList.add("hide");
+    resultPageArea.classList.add("hide");
+    gameArea.classList.add("hide");
 }
 
 
