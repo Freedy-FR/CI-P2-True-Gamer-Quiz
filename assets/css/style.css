@@ -82,8 +82,11 @@ label {
     flex-direction: column;
     background-color: var(--main-color);
 
-    min-width: 20rem;
-    max-width: 60rem;
+    /* min-width: 20rem;
+    max-width: 60rem; */
+
+    width: 50%;
+    height: 20%;
 
     margin: 20px auto;
     padding: 10px;
@@ -118,9 +121,18 @@ label {
     color: var(--warning-color);
 }
 
+#score p {
+    font-size: 2rem;
+}
+
 .text-container {
     padding: 10px 20px;
     font-family: 'VT323', monospace;
+    font-size: 20px;
+}
+
+.questionPara {
+    font-size: 25px;
 }
 
 .name-label {
@@ -137,8 +149,8 @@ label {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 20px;
-    margin: 20px;
+    gap: 2%;
+    margin: 10px;
 }
 
 .btn-option {
@@ -205,6 +217,7 @@ h2 {
     text-align: center;
     font-family: 'Geo', sans-serif;
     font-size: 40px;
+    margin: 5px auto;
 }
 
 .btn {
@@ -223,4 +236,40 @@ h2 {
     border: 1px solid var(--main-font-color);
     background-color: var(--main-color);
     color: var(--main-font-color);
+}
+
+
+/* Media query */
+
+@media (max-width: 426px) {
+
+    .btn {
+        padding: unset;
+        margin: 5px;
+    }
+
+    .middle-container {
+        width: 90%;
+        min-height: 80vh;
+    }
+
+    #btn-answer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1px;
+        margin: 1px 1px 20px 1px;
+    }
+
+    .btn-option {
+        text-align: justify;
+    }
+
+    .questionPara {
+        font-size: 18px;
+    }
+
+
+
+
 }
