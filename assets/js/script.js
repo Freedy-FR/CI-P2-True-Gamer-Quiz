@@ -23,6 +23,7 @@ let incorrectAnswer;
 
 let currentScore = 0;
 let questionAnswered = 1;
+let questionToShow = 1;
 let numberOfQuestions = 11;
 
 let mainPage = document.getElementById("main-page");
@@ -114,22 +115,31 @@ function HTMLtoString(textString) {
 
 //  Question Counter and correct answer counter
 function counterFunctions() {
-    questionAnswered++;
+
+    questionAnswered++
+
+    // Question number to show to the screen
+    if (questionAnswered == 11) {
+        displayQuestionNumber.innerHTML = `Finished`;
+    } else {
+        questionToShow++;
+        displayQuestionNumber.innerHTML = questionToShow;
+    }
 
     displayScore.innerHTML = currentScore;
-    displayQuestionNumber.innerHTML = questionAnswered;
 
+    // Question answered vs total question
     if (questionAnswered == numberOfQuestions) {
         setTimeout(() => {
             resultPage();
-        }, 1500);
+        }, 2000);
 
     } else {
         disableOptionButtons();
         nextButton.disabled = true;
         setTimeout(() => {
             getData();
-        }, 1500);
+        }, 2000);
     }
 }
 
@@ -164,7 +174,6 @@ function resultPage() {
     resultPageArea.classList.remove("hide");
     resultMessage.innerHTML = `<p>Congratulations ${nameInput.value} you results are: </p>`;
     finalResultScore.innerHTML = document.getElementById("score").innerHTML;
-
 }
 
 
@@ -173,7 +182,6 @@ function resultPage() {
 retryButton.addEventListener("click", retryFunction);
 
 function retryFunction() {
-
     resultPageArea.classList.add("hide");
     resetGame();
     startGame();
