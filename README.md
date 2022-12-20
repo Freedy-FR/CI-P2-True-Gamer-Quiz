@@ -252,14 +252,16 @@ The site consist of 4 integrated pages and 8 features.
 
 ### HTML Validation
 
-The W3C Markup Validation Service was used to validate the HTML of the website. All pages pass with no errors no warnings to show.
+The W3C Markup Validation Service was used to validate the HTML of the website by URL and direct input.
+All pages pass with no errors no warnings to show.
+
 <details><summary>Home</summary>
-<img src="">
-<img src="">
+<img src="assets/docs/validation/home-online.webp">
+<img src="assets/docs/validation/home-direct.webp">
 </details>
 <details><summary>404 page</summary>
-<img src="">
-<img src="">
+<img src="assets/docs/validation/pagenotfound-online.webp">
+<img src="assets/docs/validation/pagenotfound-direct.webp">
 </details>
 <br>
 
