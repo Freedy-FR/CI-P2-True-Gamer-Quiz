@@ -27,8 +27,8 @@ body {
     --main-color: #0C0C0C;
     --secondary-color: #5B5B58;
     --main-font-color: #ECECEC;
-    --warning-color: red;
-    --correct-color: rgb(0, 255, 0);
+    --warning-color: #ff0000;
+    --correct-color: #00ff00;
 }
 
 /* Navigation Bar */

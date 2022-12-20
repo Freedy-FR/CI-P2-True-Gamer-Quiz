@@ -11,6 +11,16 @@
 1. [Project Goals](#project-goals)
     1. [User Goals](#user-goals)
     2. [Site Owner Goals](#site-owner-goals)
+2. [User Experience](#user-experience)
+    1. [Target Audience](#target-audience)
+    2. [User Requirements and Expectations](#user-requirements-and-expectations)
+    3. [User Stories](#user-stories)
+    4. [Site Owner Stories](#site-owner-stories)
+3. [Design](#design)
+    1. [Design Choices](#design-choices)
+    2. [Colour](#colours)
+    3. [Fonts](#fonts)
+    4. [Structure](#structure)
 
 
 
@@ -57,4 +67,61 @@ True Gamer Quiz was designed to be a fun game to test your knowledge and to brin
 
 8. As a site owner, I want the user to be able to check our github page.
 9. As a site owner, I want the user to have a nostalgic feeling with the background image.
+
+## Design
+
+### Design Choices
+
+The quiz was designed to bring a nostalgic felling to the user by using a retro fonts, dark and colorful shades of colors.
+
+### Colour
+
+The color palette was chosen to match the nostalgic retro 8-bit games with shades of dark grey and colorful red and green for the correct and incorrect answer.
+
+<details><summary>Colour palette</summary>
+<img src="assets/docs/color/true-gamer-pallete.webp">
+</details>
+
+### Fonts
+
+For the fonts the VT323 8-bit was choosen for the text and paragraphs to give a retro game feel and GEO for the headings to give a modern feel.
+
+### Structure
+
+The website consists of four integrated pages:
+
+- A homepage with 3 different views:
+    - one main page for inserting your name.
+    - one for answering the questions.
+    - one that show the results to the user.
+- A rules explanation page.
+- An about the game page.
+- A 404 page not found.
+
+### Wireframes
+
+<details><summary>Start screen</summary>
+<img src="assets/docs/wireframes/homepage-wires.webp">
+</details>
+
+<details><summary>Questions screen</summary>
+<img src="assets/docs/wireframes/quiz-wires.webp">
+</details>
+
+<details><summary>Result screen</summary>
+<img src="assets/docs/wireframes/result-wire.webp">
+</details>
+
+<details><summary>Rules screen</summary>
+<img src="assets/docs/wireframes/rules-wire.webp">
+</details>
+
+<details><summary>About screen</summary>
+<img src="assets/docs/wireframes/about-wire.webp">
+</details>
+
+
+
+
+
 
