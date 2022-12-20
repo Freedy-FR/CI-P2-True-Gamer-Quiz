@@ -50,6 +50,8 @@ async function getData() {
     let response = await fetch(url);
     let data = await response.json();
     questionStatus.innerHTML = "";
+    gameArea.classList.remove("correct-boxshadow");
+    gameArea.classList.remove("incorrect-boxshadow");
     showQuestion(data.results[0]);
 }
 
@@ -100,8 +102,10 @@ function checkAnswerNext() {
         if (highlightedButton == HTMLtoString(correctAnswer)) {
             currentScore++;
             questionStatus.innerHTML = `<p class="questionPara"> You got it right! <i class="fa-regular fa-circle-check"></i></p>`;
+            gameArea.classList.add("correct-boxshadow");
         } else {
             questionStatus.innerHTML = `<p class="questionPara"> You got it wrong! <i class="fa-sharp fa-solid fa-circle-xmark"></i></p><br><p class="questionPara">Correct Answer: <span class="correct-color">${correctAnswer}</span></p>`;
+            gameArea.classList.add("incorrect-boxshadow");
         }
     }
     counterFunctions();
@@ -152,7 +156,6 @@ function disableOptionButtons() {
 }
 
 
-
 // Start game function
 startButton.addEventListener("click", startGame);
 
@@ -190,11 +193,14 @@ function retryFunction() {
 // Reset counters and displays function
 function resetGame() {
     currentScore = 0;
+    questionToShow = 1;
     questionAnswered = 1;
     numberOfQuestions = 11;
     displayScore.innerHTML = currentScore;
     totalQuestions.innerHTML = numberOfQuestions - 1;
     displayQuestionNumber.innerHTML = questionAnswered;
+    gameArea.classList.remove("correct-boxshadow");
+    gameArea.classList.remove("incorrect-boxshadow");
 }
 
 // Rules Page function

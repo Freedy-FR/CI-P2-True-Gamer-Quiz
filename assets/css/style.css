@@ -120,6 +120,14 @@ label {
     color: var(--correct-color);
 }
 
+.correct-boxshadow {
+    box-shadow: 0 0 10px 2px var(--correct-color);
+}
+
+.incorrect-boxshadow {
+    box-shadow: 0 0 10px 2px var(--warning-color);
+}
+
 .fa-circle-xmark {
     padding: 0 10px;
     color: var(--warning-color);
