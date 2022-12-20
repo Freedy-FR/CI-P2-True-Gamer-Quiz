@@ -23,7 +23,6 @@ let incorrectAnswer;
 
 let currentScore = 0;
 let questionAnswered = 1;
-let questionToShow = 1;
 let numberOfQuestions = 11;
 
 let mainPage = document.getElementById("main-page");
@@ -71,7 +70,6 @@ function showQuestion(data) {
     <button class="btn-option btn">${index +1} - <span>${option}</span></button>
     `).join('')}
     `;
-    console.log(correctAnswer);
     selectBtn();
 }
 
@@ -121,13 +119,11 @@ function HTMLtoString(textString) {
 //  Question Counter and correct answer counter
 function counterFunctions() {
 
-    questionAnswered++
+    questionAnswered++;
 
     // Question number to show to the screen
     if (questionAnswered == 11) {
         displayQuestionNumber.innerHTML = `Finished`;
-    } else {
-        questionToShow++;
     }
 
     displayScore.innerHTML = currentScore;
@@ -143,7 +139,7 @@ function counterFunctions() {
         nextButton.disabled = true;
         setTimeout(() => {
             getData();
-            displayQuestionNumber.innerHTML = questionToShow;
+            displayQuestionNumber.innerHTML = questionAnswered;
         }, 2000);
     }
 }
@@ -182,7 +178,6 @@ function resultPage() {
 
 
 // Retry button function
-
 retryButton.addEventListener("click", retryFunction);
 
 function retryFunction() {
@@ -194,7 +189,7 @@ function retryFunction() {
 // Reset counters and displays function
 function resetGame() {
     currentScore = 0;
-    questionToShow = 1;
+
     questionAnswered = 1;
     numberOfQuestions = 11;
     displayScore.innerHTML = currentScore;
