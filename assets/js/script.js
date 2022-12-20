@@ -163,8 +163,8 @@ function startGame() {
 function resultPage() {
     gameArea.classList.add("hide");
     resultPageArea.classList.remove("hide");
-    finalResultScore.innerHTML = document.getElementById("score").innerHTML;
     resultMessage.innerHTML = `<p>Congratulations ${nameInput.value} you results are: </p>`;
+    finalResultScore.innerHTML = document.getElementById("score").innerHTML;
 
 }
 
