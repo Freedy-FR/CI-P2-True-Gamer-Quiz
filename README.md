@@ -6,6 +6,7 @@
 
 [Live page](https://freedy-fr.github.io/CI-P2-True-Gamer-Quiz/)
 
+
 ## Table of Content
 
 1. [Project Goals](#project-goals)
@@ -23,7 +24,6 @@
     4. [Structure](#structure)
 
 
-
 ## Project Goals
 
 True Gamer Quiz was designed to be a fun game to test your knowledge and to bring a nostalgic felling to you.
@@ -38,6 +38,7 @@ True Gamer Quiz was designed to be a fun game to test your knowledge and to brin
 
 - To create an engaging and nostalgic quiz to test your knowledge.
 - The app should be fully responsive in most screens.
+
 
 ## User Experience
 
@@ -55,18 +56,20 @@ True Gamer Quiz was designed to be a fun game to test your knowledge and to brin
 - Good presentation and a responsive design regardless of screen size.
 
 ### User Stories
-1. As a user, I want to have an welcome message.
+1. As a user, I want to have an welcome message.      
 2. As a user, I want to have a rule explanation page.
-3. As a user, I want to know more about the game.
+3. As a user, I want to know more about the game.    
 4. As a user, I want to know what the correct answer if i choose the wrong one.
-5. As a user, I want to be able to insert my name to play.
-6. As a user, I want to be able to see my final score.
-7. As a user, I want to be able to retry the game.
+5. As a user, I want to see visual indication of my correct/incorrect answer.
+6. As a user, I want to be able to insert my name to play.
+7. As a user, I want to be able to see my final score.
+8. As a user, I want to be able to retry the game.
 
 ### Site Owner Stories
 
-8. As a site owner, I want the user to be able to check our github page.
-9. As a site owner, I want the user to have a nostalgic feeling with the background image.
+9. As a site owner, I want the user to be able to check our github page. OK
+10. As a site owner, I want the user to have a nostalgic feeling with the background image.
+
 
 ## Design
 
@@ -120,6 +123,132 @@ The website consists of four integrated pages:
 <img src="assets/docs/wireframes/about-wire.webp">
 </details>
 
+
+## Technologies Used
+
+### Languages
+
+- HTML
+- CSS
+- JavaScript
+
+### Frameworks & Tools
+
+- Git
+- GitHub
+- Gitpod
+- Cloudconvert
+- Balsamiq
+- Font Awesome
+- Favicon<span>.</span>io
+- JSHint
+- Lighthouse
+- W3C Markup validation service
+- W3C Jigsaw CSS validation service 
+- WAVE WebAIM web accessibility evaluation tool
+
+
+## Features
+
+The site consist of 4 integrated pages and 8 features.
+
+### Header
+
+- Featured on all pages.
+- Consists of the game title and homepage link on it.
+
+<details><summary>Header</summary>
+<img src="assets/docs/features/header.webp">
+</details>
+<br>
+<br>
+
+### Footer
+
+- Featured on all pages.
+- Consists of a section providing social media links and a link to the about the game.
+- User story covered: 3, 9.
+
+<details><summary>Footer</summary>
+<img src="assets/docs/features/footer.webp">
+</details>
+<br>
+
+### Start screen
+
+- Provides an "insert your name" input.
+- Provide a challenge/welcoming message to the user.
+- User story covered: 1, 6.
+
+<details><summary>Start screen</summary>
+<img src="assets/docs/features/start.webp">
+</details>
+<br>
+
+### Game screen
+
+- Consists of 7 different sections:
+    - A section with the current question number.
+    - A section with the current question text.
+    - A section with the current answer buttons.
+    - A section with the next button.
+    - A section showing the correct and incorrect feedback message.
+    - A section with the current score and total number of question.
+    - Interactive shadowbox showing correct and incorrect answer.
+    - A nostalgic background image showing retro and modern video game characters.
+    - User stories covered: 4, 5, 10.
+
+<details><summary>Game screen</summary>
+<img src="assets/docs/features/game.webp">
+</details>
+<br>
+
+### Result screen
+
+- Consists of three sections
+    - A section with a congratulation message.
+    - A section with your final score.
+    - A section with a retry button to restart the game.
+    - A section with back button to get back to the homepage.
+    - User stories covered: 7, 8.
+
+<details><summary>Result screen</summary>
+<img src="assets/docs/features/result.webp">
+</details>
+<br>
+
+### Rules screen
+
+- Provides a set of rules to be followed.
+- A section with a back button.
+- User story covered: 2.
+
+<details><summary>Rules screen</summary>
+<img src="assets/docs/features/rules.webp">
+</details>
+<br>
+
+### About screen
+
+- A section showing a brief description about the game.
+- A section with a back button.
+- User story covered: 3.
+
+<details><summary>About screen</summary>
+<img src="assets/docs/features/about.webp">
+</details>
+<br>
+
+### 404 page
+
+- A section showing the user that the page could not be found.
+
+<details><summary>404 page</summary>
+<img src="assets/docs/features/pagenotfound.webp">
+</details>
+
+
+## Validation
 
 
 
