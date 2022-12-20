@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=VT323&display=swap');
 
+/* General style */
 * {
     box-sizing: border-box;
 }
 
+/* Body style */
 body {
     display: flex;
     flex-direction: column;
@@ -22,7 +24,7 @@ body {
     background-size: cover;
 }
 
-/* Color Variables */
+/* Color variables */
 :root {
     --main-color: #0C0C0C;
     --secondary-color: #5B5B58;
@@ -31,7 +33,7 @@ body {
     --correct-color: #00ff00;
 }
 
-/* Navigation Bar */
+/* Navigation bar */
 nav {
     width: 100%;
     height: 50px;
@@ -39,6 +41,7 @@ nav {
     top: 0;
 }
 
+/* Main title style */
 nav>h1 {
     display: flex;
     width: 100%;
@@ -70,6 +73,7 @@ main {
     align-items: center;
 }
 
+/* Name input */
 input,
 label {
     display: block;
@@ -77,6 +81,23 @@ label {
     margin: auto;
 }
 
+.name-label {
+    text-align: center;
+    font-size: 18px;
+}
+
+.name-container {
+    display: block;
+    width: 40%;
+}
+
+.name-status {
+    color: var(--warning-color);
+    font-size: 25px;
+    text-align: center;
+}
+
+/* Middle container for general use */
 .middle-container {
     display: flex;
     flex-direction: column;
@@ -103,16 +124,24 @@ label {
     color: var(--main-font-color);
 }
 
+/* Paragraph text style */
 .para-text {
     text-align: center;
     font-size: 25px;
 }
 
+/* Font awesome icons style */
 .fa-circle-check {
     padding: 0 10px;
     color: var(--correct-color);
 }
 
+.fa-circle-xmark {
+    padding: 0 10px;
+    color: var(--warning-color);
+}
+
+/* Correct and incorret colors style */
 .correct-color {
     color: var(--correct-color);
 }
@@ -125,15 +154,12 @@ label {
     box-shadow: 0 0 10px 2px var(--warning-color);
 }
 
-.fa-circle-xmark {
-    padding: 0 10px;
-    color: var(--warning-color);
-}
-
+/* Score style */
 #score p {
     font-size: 2rem;
 }
 
+/* Text and paragraphs style */
 .text-container {
     padding: 10px 20px;
     font-family: 'VT323', monospace;
@@ -145,16 +171,7 @@ label {
     text-align: center;
 }
 
-.name-label {
-    text-align: center;
-    font-size: 18px;
-}
-
-.name-container {
-    display: block;
-    width: 40%;
-}
-
+/* Button style */
 #btn-answer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -167,16 +184,15 @@ label {
     font-size: medium;
 }
 
-.name-status {
-    color: var(--warning-color);
-    font-size: 25px;
-    text-align: center;
+.btn {
+    padding: 5px;
+    margin: 10px;
+
+    font-family: 'VT323', monospace;
+    font-size: 20px;
 }
 
-
-
 /* Footer Styles */
-
 #sticky {
     margin-top: 10px;
     width: 100%;
@@ -230,14 +246,6 @@ h2 {
     margin: 5px auto;
 }
 
-.btn {
-    padding: 5px;
-    margin: 10px;
-
-    font-family: 'VT323', monospace;
-    font-size: 20px;
-}
-
 .hide {
     display: none;
 }
@@ -251,6 +259,7 @@ h2 {
 
 /* Media query */
 
+/* Mobile screen media query */
 @media (max-width: 426px) {
 
     h1 {
@@ -284,6 +293,7 @@ h2 {
     }
 }
 
+/* Tablet screen media query */
 @media (max-width: 1025px) {
 
     .middle-container {
