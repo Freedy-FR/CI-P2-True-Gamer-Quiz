@@ -34,6 +34,7 @@ let aboutPageArea = document.getElementById("about");
 
 // DOM load
 document.addEventListener("DOMContentLoaded", () => {
+    nameInput.focus();
     displayScore.innerHTML = currentScore;
     totalQuestions.innerHTML = numberOfQuestions - 1;
     getData();
@@ -201,6 +202,7 @@ function resetGame() {
     displayQuestionNumber.innerHTML = questionAnswered;
     gameArea.classList.remove("correct-boxshadow");
     gameArea.classList.remove("incorrect-boxshadow");
+    nameInput.focus();
 }
 
 // Rules Page function
