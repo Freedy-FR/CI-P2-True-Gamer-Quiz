@@ -246,6 +246,7 @@ The site consist of 4 integrated pages and 8 features.
 <details><summary>404 page</summary>
 <img src="assets/docs/features/pagenotfound.webp">
 </details>
+<br>
 
 
 ## Validation
@@ -265,6 +266,14 @@ All pages pass with no errors no warnings to show.
 </details>
 <br>
 
+### CSS Validation
+The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website by URL and direct input.
+The page pass with no errors no warnings to show.
 
+<details><summary>CSS</summary>
+<img src="assets/docs/validation/CSS-online.webp">
+<img src="assets/docs/validation/CSS-direct.webp">
+</details>
+<br>
 
 
