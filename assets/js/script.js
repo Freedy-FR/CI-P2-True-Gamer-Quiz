@@ -123,7 +123,6 @@ function counterFunctions() {
         displayQuestionNumber.innerHTML = `Finished`;
     } else {
         questionToShow++;
-        displayQuestionNumber.innerHTML = questionToShow;
     }
 
     displayScore.innerHTML = currentScore;
@@ -139,6 +138,7 @@ function counterFunctions() {
         nextButton.disabled = true;
         setTimeout(() => {
             getData();
+            displayQuestionNumber.innerHTML = questionToShow;
         }, 2000);
     }
 }
