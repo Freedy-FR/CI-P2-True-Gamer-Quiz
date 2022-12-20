@@ -82,10 +82,7 @@ label {
     flex-direction: column;
     background-color: var(--main-color);
 
-    /* min-width: 20rem;
-    max-width: 60rem; */
-
-    width: 50%;
+    width: 60%;
     height: 20%;
 
     margin: 20px auto;
@@ -256,13 +253,17 @@ h2 {
 
 @media (max-width: 426px) {
 
+    h1 {
+        font-size: 30px;
+    }
+
     .btn {
         padding: unset;
         margin: 5px;
     }
 
     .middle-container {
-        width: 90%;
+        min-width: 95%;
         min-height: 80vh;
     }
 
