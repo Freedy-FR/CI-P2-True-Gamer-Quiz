@@ -276,4 +276,11 @@ The page pass with no errors no warnings to show.
 </details>
 <br>
 
+### JavaScript Validation
+JSHint Static Code Analysis Tool for JavaScript was used to validate the Javascript files. No significant issues were found.
+<details><summary>JavaScript File</summary>
+<img src="">
+</details>
+<br>
+
 

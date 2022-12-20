@@ -1,6 +1,5 @@
 // Variables
 let startButton = document.getElementById("btn-start");
-
 let nameInput = document.getElementById("name");
 let questionInput = document.getElementById("question");
 let answerGrid = document.getElementById("btn-answer");
@@ -18,20 +17,23 @@ let aboutDiv = document.getElementById("footer-about");
 let backButton = document.getElementsByClassName("btn-back");
 let resultMessage = document.getElementById("text-result");
 
+// Answers variables
 let correctAnswer;
 let incorrectAnswer;
 
+// Score and question counters variables
 let currentScore = 0;
 let questionAnswered = 1;
 let numberOfQuestions = 11;
 
+// Call pages variables
 let mainPage = document.getElementById("main-page");
 let gameArea = document.getElementById("game-area");
 let resultPageArea = document.getElementById("results");
 let rulesPageArea = document.getElementById("rules");
 let aboutPageArea = document.getElementById("about");
 
-// DOM load
+// DOM load event listener
 document.addEventListener("DOMContentLoaded", () => {
     nameInput.focus();
     displayScore.innerHTML = currentScore;
@@ -39,12 +41,11 @@ document.addEventListener("DOMContentLoaded", () => {
     getData();
 });
 
-
 // Api url
 let url = "https://opentdb.com/api.php?amount=1&category=15&difficulty=easy&type=multiple";
 
 /**
- * Api function to fetch an array of objects with questions and answer
+ * Api function to fetch an array of objects with questions and answer.
  */
 async function getData() {
     let response = await fetch(url);
@@ -55,8 +56,9 @@ async function getData() {
     showQuestion(data.results[0]);
 }
 
-
-// Show Questions and answers function
+/**
+ * Function that store the API data in variables, randomize the correct and incorrect answer and log then to the html.
+ */
 function showQuestion(data) {
     nextButton.disabled = true;
     questionStatus.innerHTML = `<p class="questionPara">Please insert an Answer!!</p>`;
@@ -73,8 +75,10 @@ function showQuestion(data) {
     selectBtn();
 }
 
-
-// Button selector
+/**
+ * Function that add an event listener for each answer button,
+ * then checks if they have the highlight class and if clicked add the highlight class to them.
+ */
 function selectBtn() {
     answerGrid.querySelectorAll("button").forEach((option) => {
         option.addEventListener("click", () => {
@@ -89,14 +93,16 @@ function selectBtn() {
     });
 }
 
-
-// Next button and check answer
+// Next button event listener
 nextButton.addEventListener("click", checkAnswerNext);
 
+/**
+ * Function that compares the highlighted clicked button to the correct answer provided by the API,
+ * returns the correct and incorrect feedback messages and show the respective color to the boxshadow.
+ */
 function checkAnswerNext() {
     if (answerGrid.querySelector(".highlighted")) {
         let highlightedButton = answerGrid.querySelector(".highlighted span").textContent;
-        console.log(highlightedButton);
 
         if (highlightedButton == HTMLtoString(correctAnswer)) {
             currentScore++;
@@ -110,13 +116,18 @@ function checkAnswerNext() {
     counterFunctions();
 }
 
-// Transform HTML into text strings
+/**
+ * Function that parse the html code to text strings and returns the text string to compare to the clicked answer.
+ */
 function HTMLtoString(textString) {
     let source = new DOMParser().parseFromString(textString, "text/html");
     return source.documentElement.textContent;
 }
 
-//  Question Counter and correct answer counter
+/**
+ * Function that increase the counters and display then to the screen,
+ * adds delay to the callout of the next question and call out the next question or the result page.
+ */
 function counterFunctions() {
 
     questionAnswered++;
@@ -144,18 +155,21 @@ function counterFunctions() {
     }
 }
 
-
-// Disable Answer buttons
+/**
+ * Function to disable all answer buttons on the game area.
+ */
 function disableOptionButtons() {
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].disabled = true;
     }
 }
 
-
-// Start game function
+// Start game button event listener
 startButton.addEventListener("click", startGame);
 
+/**
+ * Function to check if name was inserted and to hide main page and bring the game area to the screen.
+ */
 function startGame() {
     if (nameInput.value == "") {
         nameStatus.innerHTML = `<p class="name-status">Please insert your name to start the game!</p>`;
@@ -167,8 +181,9 @@ function startGame() {
     }
 }
 
-
-// Result Page function
+/**
+ * Function to call the result page and show the result messa and score.
+ */
 function resultPage() {
     gameArea.classList.add("hide");
     resultPageArea.classList.remove("hide");
@@ -176,20 +191,23 @@ function resultPage() {
     finalResultScore.innerHTML = document.getElementById("score").innerHTML;
 }
 
-
-// Retry button function
+// Retry button event listener
 retryButton.addEventListener("click", retryFunction);
 
+/**
+ * Function to restart the game and call the reset scores and counters.
+ */
 function retryFunction() {
     resultPageArea.classList.add("hide");
     resetGame();
     startGame();
 }
 
-// Reset counters and displays function
+/**
+ * Function to reset scores and counters and styles.
+ */
 function resetGame() {
     currentScore = 0;
-
     questionAnswered = 1;
     numberOfQuestions = 11;
     displayScore.innerHTML = currentScore;
@@ -200,18 +218,23 @@ function resetGame() {
     nameInput.focus();
 }
 
-// Rules Page function
+// Rules Page event listener
 rulesButton.addEventListener("click", rulesPage);
 
+/**
+ * Function to call the rules page.
+ */
 function rulesPage() {
     rulesPageArea.classList.remove("hide");
     mainPage.classList.add("hide");
 }
 
-
-// About page function
+// About page event listener
 aboutDiv.addEventListener("click", aboutPage);
 
+/**
+ * Function to call the about page.
+ */
 function aboutPage() {
     aboutPageArea.classList.remove("hide");
     mainPage.classList.add("hide");
@@ -220,12 +243,14 @@ function aboutPage() {
     gameArea.classList.add("hide");
 }
 
-
-// Back button function
+// Back button event listener iteration
 for (let i = 0; i < backButton.length; i++) {
     backButton[i].addEventListener("click", backFunction);
 }
 
+/**
+ * Function that goes back to the back page and call the reset game function.
+ */
 function backFunction() {
     mainPage.classList.remove("hide");
     aboutPageArea.classList.add("hide");
