@@ -121,7 +121,6 @@ function counterFunctions() {
 
     if (questionAnswered == numberOfQuestions) {
         setTimeout(() => {
-            alert("result");
             resultPage();
         }, 1500);
 
@@ -203,7 +202,6 @@ function rulesPage() {
 aboutDiv.addEventListener("click", aboutPage);
 
 function aboutPage() {
-    alert("testing 123");
     aboutPageArea.classList.remove("hide");
     mainPage.classList.add("hide");
     rulesPageArea.classList.add("hide");
