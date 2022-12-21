@@ -142,6 +142,8 @@ function counterFunctions() {
 
     // Question answered vs total question
     if (questionAnswered == numberOfQuestions) {
+        disableOptionButtons();
+        nextButton.disabled = true;
         setTimeout(() => {
             resultPage();
         }, 2000);
@@ -162,6 +164,15 @@ function counterFunctions() {
 function disableOptionButtons() {
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].disabled = true;
+    }
+}
+
+/**
+ * Function to enable all answer buttons on the game area.
+ */
+function enableOptionButtons() {
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].disabled = false;
     }
 }
 
@@ -202,6 +213,7 @@ function retryFunction() {
     resultPageArea.classList.add("hide");
     resetGame();
     startGame();
+
 }
 
 /**
@@ -217,6 +229,8 @@ function resetGame() {
     gameArea.classList.remove("correct-boxshadow");
     gameArea.classList.remove("incorrect-boxshadow");
     nameInput.focus();
+    nextButton.disabled = false;
+    enableOptionButtons();
 }
 
 // Rules Page event listener

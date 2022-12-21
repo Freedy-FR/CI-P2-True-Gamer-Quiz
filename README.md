@@ -165,6 +165,7 @@ The website consists of four integrated pages:
 - W3C Markup validation service
 - W3C Jigsaw CSS validation service 
 - WAVE WebAIM web accessibility evaluation tool
+- Open Trivia Database
 
 
 ## Features
@@ -473,6 +474,8 @@ The website was tested on the following browsers:
 
 ## Bugs
 
+| **Bug** | **Fix** |
+| ----------- | ----------- |
 | The score doesn't reset after the game is restarted | Add resetGame function |
 | The question number jumps to 11 before loading result page | Add if conditional statement to show Questions Finished |
 | Favicon icon not displaying on github pages | Add ? to end of meta href |
@@ -512,9 +515,10 @@ Images/Pictures not listed below are owned by the developer.
 ### Code
 
 - API async code taken from <a href="https://www.youtube.com/@codecastcommunity8192">CodeCast Community</a>.
-- General understand of functions taken from tutorials of<a href="https://www.youtube.com/@geekprobin1456">GeekProbin</a>.
-- General understand of quiz structure taken from tutorials of<a href="https://www.youtube.com/@WebDevSimplified">Web Dev Simplified</a>.
+- General understand of functions taken from tutorials of <a href="https://www.youtube.com/@geekprobin1456">GeekProbin</a>.
+- General understand of quiz structure taken from tutorials of <a href="https://www.youtube.com/@WebDevSimplified">Web Dev Simplified</a>.
 - Documentation (README.md) standard structure skeleton taken from former Code Institute student <a href="https://github.com/4n4ru">Ana</a> from the project <a href="https://github.com/4n4ru/CI-P2-GuessingBee">PP-2</a>.
+- API question and answer database data taken from <a href="https://opentdb.com/api_config.php">Open Trivia Database</a>.
 
 ## Acknowledgements
 
