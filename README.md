@@ -19,23 +19,28 @@
     4. [Site Owner Stories](#site-owner-stories)
 3. [Design](#design)
     1. [Design Choices](#design-choices)
-    2. [Colour](#colours)
+    2. [Colour](#colour)
     3. [Fonts](#fonts)
     4. [Structure](#structure)
     5. [Wireframes](#wireframes)
 4. [Technologies Used](#technologies-used)
     1. [Languages](#languages)
-    2. [Frameworks & Tools](#frameworks-&-tools)
+    2. [Frameworks & Tools](#frameworks-and-tools)
 5. [Features](#features)
 6. [Testing](#validation)
-    1. [HTML Validation](#HTML-validation)
-    2. [CSS Validation](#CSS-validation)
+    1. [HTML Validation](#html-validation)
+    2. [CSS Validation](#css-validation)
     3. [JavaScript Validation](#javascript-validation)
     4. [Accessibility](#accessibility)
     5. [Performance](#performance)
     6. [Device testing](#performing-tests-on-various-devices)
     7. [Browser compatibility](#browser-compatability)
     8. [Testing user stories](#testing-user-stories)
+8. [Bugs](#bugs)
+9. [Deployment](#deployment)
+10. [Credits](#credits)
+11. [Acknowledgements](#acknowledgements)
+
 
 
 ## Project Goals
@@ -146,7 +151,7 @@ The website consists of four integrated pages:
 - CSS
 - JavaScript
 
-### Frameworks & Tools
+### Frameworks and Tools
 
 - Git
 - GitHub
@@ -482,10 +487,12 @@ The  project was deployed using GitHub Pages by the following steps:
 4. After the webpage refreshes automaticaly you will se a ribbon on the top saying: "Your site is published at https://freedy-fr.github.io/CI-P2-True-Gamer-Quiz/"
 
 You can for fork the repository by the following steps:
+
 1. Go to the GitHub repository
 2. Click on Fork button in upper right hand corner
 
 You can clone the repository by the following steps:
+
 1. Go to the GitHub repository 
 2. Locate the Code button above the list of files and click it 
 3. Select if you prefere to clone using HTTPS, SSH, or Github CLI and click the copy button to copy the URL to your clipboard
@@ -493,6 +500,29 @@ You can clone the repository by the following steps:
 5. Change the current working directory to the one where you want the cloned directory
 6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
 7. Press Enter to create your local clone.
+
+## Credits
+
+Images/Pictures not listed below are owned by the developer.
+
+### Media
+
+- [Main-Background-Image](assets/images/wallpaperflare.com_wallpaper.webp) :Photo by Wallpaper Flare </a> on <a href="https://c4.wallpaperflare.com/wallpaper/950/753/310/video-game-characters-video-game-girls-games-art-render-digital-hd-wallpaper-preview.jpg">Wallpaper Flare</a>.
+
+### Code
+
+- API async code taken from <a href="https://www.youtube.com/@codecastcommunity8192">CodeCast Community</a>.
+- General understand of functions taken from tutorials of<a href="https://www.youtube.com/@geekprobin1456">GeekProbin</a>.
+- General understand of quiz structure taken from tutorials of<a href="https://www.youtube.com/@WebDevSimplified">Web Dev Simplified</a>.
+- Documentation (README.md) standard structure skeleton taken from former Code Institute student <a href="https://github.com/4n4ru">Ana</a> from the project <a href="https://github.com/4n4ru/CI-P2-GuessingBee">PP-2</a>.
+
+## Acknowledgements
+
+- My Mentor Victor Miclovich for the guidance, patience and motivation.
+- To Code Institute for the support and attention.
+
+
+
 
 
 
