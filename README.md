@@ -466,6 +466,13 @@ The website was tested on the following browsers:
 </details>     
 <br>
 
+## Bugs
+
+| The score doesn't reset after the game is restarted | Add resetGame function |
+| The question number jumps to 11 before loading result page | Add if conditional statement to show Questions Finished |
+| Favicon icon not displaying on github pages | Add ? to end of meta href |
+
+
 
 
 
