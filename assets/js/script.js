@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Api url
 let url = "https://opentdb.com/api.php?amount=1&category=15&difficulty=easy&type=multiple";
 
+// Code taken from CodeCast Tutorial
 /**
  * Api function to fetch an array of objects with questions and answer.
  */
