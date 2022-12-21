@@ -312,3 +312,21 @@ Google Lighthouse in Google Chrome Developer Tools was used to test the performa
 </details>
 <br>
 
+### Performing tests on various devices 
+
+The website was tested on the following devices.
+
+- Galaxy Samsung S10+
+- Galaxy Samsung S22 Ultra
+- Surface Pro 8 (Tablet and Desktop mode)
+
+The website was tested with Google Chrome Developer Tools throughout the available screen sizes.
+
+### Browser Compatability
+
+The website was tested on the following browsers:
+
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Edge
+
