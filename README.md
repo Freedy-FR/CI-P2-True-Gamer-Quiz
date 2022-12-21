@@ -22,6 +22,20 @@
     2. [Colour](#colours)
     3. [Fonts](#fonts)
     4. [Structure](#structure)
+    5. [Wireframes](#wireframes)
+4. [Technologies Used](#technologies-used)
+    1. [Languages](#languages)
+    2. [Frameworks & Tools](#frameworks-&-tools)
+5. [Features](#features)
+6. [Testing](#validation)
+    1. [HTML Validation](#HTML-validation)
+    2. [CSS Validation](#CSS-validation)
+    3. [JavaScript Validation](#javascript-validation)
+    4. [Accessibility](#accessibility)
+    5. [Performance](#performance)
+    6. [Device testing](#performing-tests-on-various-devices)
+    7. [Browser compatibility](#browser-compatability)
+    8. [Testing user stories](#testing-user-stories)
 
 
 ## Project Goals
@@ -67,7 +81,7 @@ True Gamer Quiz was designed to be a fun game to test your knowledge and to brin
 
 ### Site Owner Stories
 
-9. As a site owner, I want the user to be able to check our github page. OK
+9. As a site owner, I want the user to be able to check our github page.
 10. As a site owner, I want the user to have a nostalgic feeling with the background image.
 
 
@@ -166,7 +180,7 @@ The site consist of 4 integrated pages and 8 features.
 ### Footer
 
 - Featured on all pages.
-- Consists of a section providing social media links and a link to the about the game.
+- Consists of a section providing git hub link and a link to the about the game.
 - User story covered: 3, 9.
 
 <details><summary>Footer</summary>
@@ -329,4 +343,131 @@ The website was tested on the following browsers:
 - Google Chrome
 - Mozilla Firefox
 - Microsoft Edge
+
+### Testing user stories
+
+1. As a user, I want to have an welcome message.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Start screen | Load the homepage | Show the welcome/challenge message | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="assets/docs/user-stories/user-1-welcome.webp">
+</details>     
+<br>
+
+2. As a user, I want to have a rule explanation page.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Rules screen | Click on the rules button | Shows the rules page to the user | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="assets/docs/user-stories/user-2-start.webp">
+<img src="assets/docs/user-stories/user-2-rules.webp">
+</details>     
+<br>
+
+
+3. As a user, I want to know more about the game.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| About screen | Click on the about section on the footer | Shows the rules page to the user | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="assets/docs/user-stories/user-3-footer.webp">
+<img src="assets/docs/user-stories/user-3-about.webp">
+</details>     
+<br>
+
+
+4. As a user, I want to know what the correct answer if i choose the wrong one.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Result screen | Select wrong answer | Load the correct feedback message | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="assets/docs/user-stories/user-4-answer.webp">
+</details>     
+<br>
+
+
+5. As a user, I want to see visual indication of my correct/incorrect answer.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Result screen | Select wrong answer | Load the correct feedback boxshadow | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="assets/docs/user-stories/user-5-boxshadow.webp">
+</details>     
+<br>
+
+
+6. As a user, I want to be able to insert my name to play.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Start screen | Insert your name | Shows warning message to insert your name | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="assets/docs/user-stories/user-6-name.webp">
+</details>     
+<br>
+
+
+7. As a user, I want to be able to see my final score.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Result screen | Finish the game | Show final score to the user | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="assets/docs/user-stories/user-7-score.webp">
+</details>     
+<br>
+
+
+8. As a user, I want to be able to retry the game.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Result screen | Click on the retry button | Restart the game to question 1 | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="assets/docs/user-stories/user-8-retry.webp">
+</details>     
+<br>
+
+
+9. As a site owner, I want the user to be able to check our github page.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Footer | Click on the github icon | Open github on a new page | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="assets/docs/user-stories/user-9-git.webp">
+</details>     
+<br>
+
+
+10. As a site owner, I want the user to have a nostalgic feeling with the background image.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Background Image | Load any page | Shows a background image with video game characters | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="assets/docs/user-stories/user-10-background.webp">
+</details>     
+<br>
+
+
+
+
+
 
