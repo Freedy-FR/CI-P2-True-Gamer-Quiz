@@ -267,6 +267,7 @@ All pages pass with no errors no warnings to show.
 <br>
 
 ### CSS Validation
+
 The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website by URL and direct input.
 The page pass with no errors no warnings to show.
 
@@ -277,9 +278,12 @@ The page pass with no errors no warnings to show.
 <br>
 
 ### JavaScript Validation
-JSHint Static Code Analysis Tool for JavaScript was used to validate the Javascript files. No significant issues were found.
+
+JSHint Static Code Analysis Tool for JavaScript was used to validate the Javascript file.
+No significant issues were found.
+
 <details><summary>JavaScript File</summary>
-<img src="">
+<img src="assets/docs/validation/js-jshint.webp">
 </details>
 <br>
 
