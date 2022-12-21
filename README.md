@@ -472,6 +472,29 @@ The website was tested on the following browsers:
 | The question number jumps to 11 before loading result page | Add if conditional statement to show Questions Finished |
 | Favicon icon not displaying on github pages | Add ? to end of meta href |
 
+## Deployment
+
+The  project was deployed using GitHub Pages by the following steps:
+
+1. In the GitHub repository navigate to the Settings tab
+2. On the left hand menu select Pages
+3. For the source select Branch: master
+4. After the webpage refreshes automaticaly you will se a ribbon on the top saying: "Your site is published at https://freedy-fr.github.io/CI-P2-True-Gamer-Quiz/"
+
+You can for fork the repository by the following steps:
+1. Go to the GitHub repository
+2. Click on Fork button in upper right hand corner
+
+You can clone the repository by the following steps:
+1. Go to the GitHub repository 
+2. Locate the Code button above the list of files and click it 
+3. Select if you prefere to clone using HTTPS, SSH, or Github CLI and click the copy button to copy the URL to your clipboard
+4. Open Git Bash
+5. Change the current working directory to the one where you want the cloned directory
+6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
+7. Press Enter to create your local clone.
+
+
 
 
 
