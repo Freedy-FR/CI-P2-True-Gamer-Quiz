@@ -300,4 +300,15 @@ All pages pass with no errors.
 </details>
 <br>
 
+### Performance 
+
+Google Lighthouse in Google Chrome Developer Tools was used to test the performance of the website.
+
+<details><summary>Home</summary>
+<img src="assets/docs/validation/home-performance.webp">
+</details>
+<details><summary>404 page</summary>
+<img src="assets/docs/validation/pagenotfound-performance.webp">
+</details>
+<br>
 
