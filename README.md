@@ -287,4 +287,17 @@ No significant issues were found.
 </details>
 <br>
 
+### Accessibility
+
+The WAVE WebAIM web accessibility evaluation tool was used to ensure the website met high accessibility standards.
+All pages pass with no errors.
+
+<details><summary>Home</summary>
+<img src="assets/docs/validation/home-wave.webp">
+</details>
+<details><summary>404 page</summary>
+<img src="assets/docs/validation/pagenotfound-wave.webp">
+</details>
+<br>
+
 
